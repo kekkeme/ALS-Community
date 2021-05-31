@@ -251,6 +251,14 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "ALS|Movement System")
 	UAnimMontage* GetRollAnimation();
 
+	/** Implement on BP to get required roll animation according to character's state */
+	UFUNCTION(BlueprintCallable, Category = "ALS|Movement System")
+	void EnteredStairMode();
+
+	/** Implement on BP to get required roll animation according to character's state */
+	UFUNCTION(BlueprintCallable, Category = "ALS|Movement System")
+	void ExitedStairMode();
+
 	/** Utility */
 
 	UFUNCTION(BlueprintCallable, Category = "ALS|Utility")
