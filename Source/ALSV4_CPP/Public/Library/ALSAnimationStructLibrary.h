@@ -130,6 +130,9 @@ struct FALSAnimCharacterInformation
 	float ZoomAmount = 0.0f;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "ALS|Character Information")
+	bool bHasStairMovement  = false;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "ALS|Character Information")
 	EALSMovementState PrevMovementState = EALSMovementState::None;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "ALS|Character Information")

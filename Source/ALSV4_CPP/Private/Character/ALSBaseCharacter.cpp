@@ -1557,11 +1557,13 @@ void AALSBaseCharacter::OnRep_VisibleMesh(USkeletalMesh* NewVisibleMesh)
 void AALSBaseCharacter::EnteredStairMode()
 {
 	FALSMovementSettings settings = MovementData.VelocityDirection.Standing;
-	settings.RunSpeed = 100;
+	settings.RunSpeed = 200;
 	MyCharacterMovementComponent->SetMovementSettings(settings);
+	MainAnimInstance->GetCharacterInformationMutable().bHasStairMovement = true;
 }
 
 void AALSBaseCharacter::ExitedStairMode()
 {
 	MyCharacterMovementComponent->SetMovementSettings(GetTargetMovementSettings());
+	MainAnimInstance->GetCharacterInformationMutable().bHasStairMovement = false;
 }

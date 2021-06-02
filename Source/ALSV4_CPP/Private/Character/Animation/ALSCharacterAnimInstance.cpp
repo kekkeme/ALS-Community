@@ -626,7 +626,7 @@ void UALSCharacterAnimInstance::UpdateMovementValues(float DeltaSeconds)
 	Grounded.WalkRunBlend = CalculateWalkRunBlend();
 
 	// Set the Stride Blend
-	Grounded.StrideBlend = CalculateStrideBlend();
+	Grounded.StrideBlend = CharacterInformation.bHasStairMovement ? 0.5 : CalculateStrideBlend();
 
 	// Set the Standing and Crouching Play Rates
 	Grounded.StandingPlayRate = CalculateStandingPlayRate();
